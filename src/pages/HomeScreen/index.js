@@ -4,7 +4,7 @@ import {
 	Title,
 	PoweredBy,
 	CardContainer,
-	LogoBbm
+	LogoBbm,
 } from './style'
 
 import HomeCard from '../../components/HomeCard'
@@ -22,9 +22,24 @@ const HomeScreen = () => {
 			</Header>
 
 			<CardContainer>
-				<HomeCard nome="1"/>
-				<HomeCard nome="2"/>
-				<HomeCard nome="3"/>
+				<HomeCard
+					title='Criar Formulário'
+					titleImage='Criar Formulário'
+					description='Clique aqui para criar seu formulário.'
+					to='/CreateForm'
+				/>
+				<HomeCard
+					title='Gerenciar'
+					titleImage='Gerenciar'
+					description='Clique aqui para editar ou apagar seus formulários'
+					to='/EditForm'
+				/>
+				<HomeCard
+					title='Preenchimentos'
+					titleImage='Preenchimentos'
+					description='Clique aqui para gerenciar seus preenchimentos'
+					to='/EditPreenc'
+				/>
 			</CardContainer>
 
 			<BtnAjuda />

@@ -1,23 +1,37 @@
 import {
-	Card,
-	Content,
-	Title,
-	Copy,
-	Btn,
+	Center,
+	PropertyCard,
+	PropertyImage,
+	PropertyImageTitle,
+	PropertyDescription,
+	CardTile,
 } from './style'
+
+import { Link } from 'react-router-dom'
 
 const HomeCard = (props) => {
 	return (
-		<Card>
-			<Content>
-				<Title>{ props.nome }</Title>
-
-				<Copy>
-					{ props.description }
-				</Copy>
-				<Btn>Entrar</Btn>
-			</Content>
-		</Card>
+		<Center>
+			<Link to={props.to} style={{ textDecoration: 'none' }}>
+				<PropertyCard>
+					<PropertyImage className='property-image'>
+						<PropertyImageTitle className='property-image-title'>
+							<h5>
+								{
+									props.titleImage
+								}
+							</h5>
+						</PropertyImageTitle>
+					</PropertyImage>
+					<PropertyDescription className='property-description'>
+						<CardTile>
+							{props.title}
+						</CardTile>
+						<p> {props.description} </p>
+					</PropertyDescription>
+				</PropertyCard>
+			</Link>
+		</Center>
 	)
 }
 
